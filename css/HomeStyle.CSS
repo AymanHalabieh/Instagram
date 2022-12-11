@@ -1,0 +1,615 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  /* background-color: red; */
+  display: flex;
+  border-bottom: 1px solid black;
+  display: none;
+}
+.nav .NavLogo {
+  width: 50%;
+}
+
+.nav .NavLogo a {
+  font-family: "Island Moments", cursive;
+  text-decoration: none;
+  font-size: 40px;
+  color: black;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+.nav .NavContent {
+  width: 50%;
+  display: flex;
+  margin-top: 8px;
+}
+.nav .NavContent .SearchInput {
+  position: relative;
+  width: 75%;
+  height: 80%;
+  background-color: rgb(212, 212, 212);
+  border-radius: 9px;
+}
+.nav .NavContent .SearchInput input {
+  position: absolute;
+  border: 0;
+  width: 90%;
+  height: 100%;
+  top: 0;
+  outline: 0;
+  left: 10%;
+  font-size: 18px;
+  background-color: rgb(212, 212, 212);
+  color: black;
+}
+
+.nav .NavContent .SearchInput i {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-left: 5px;
+}
+.nav .NavContent i {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.SideMenu {
+  position: fixed;
+  height: 100%;
+  width: 250px;
+  top: 0;
+  left: 0;
+  /* background: black; */
+  border-right: 1px solid black;
+  transition: 0.6s width;
+}
+.MenuLogo {
+  width: 100%;
+  height: 75px;
+  /* background: green; */
+  margin-bottom: 10%;
+}
+.MenuLogo .Logo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+}
+/* .MenuLogo .Logo .LogoImage {
+  width: 75%;
+  height: auto;
+} */
+
+.MenuLogo .Logo a {
+  font-family: "Island Moments", cursive;
+  text-decoration: none;
+  font-size: 50px;
+  color: black;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+.MenuLogo .Logo i {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-left: 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  visibility: hidden;
+}
+.MenuItem {
+  width: 100%;
+  height: 60px;
+  /* background: red; */
+  margin-bottom: 2vh;
+  display: flex;
+}
+.MenuItem img {
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.MenuItem a,
+.MenuItemMore a {
+  text-decoration: none;
+  font-size: 20px;
+  /* font-weight: bold; */
+  color: black;
+  margin-left: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.MenuItem i,
+.MenuItemMore i {
+  font-size: 20px;
+  font-weight: bold;
+  /* color: black; */
+  margin-left: 20px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.MenuItemMore {
+  width: 100%;
+  height: 50px;
+  /* background: blue; */
+  margin-bottom: 7%;
+  position: absolute;
+  margin-top: 15px;
+  bottom: 0;
+}
+i:hover {
+  font-size: 25px;
+}
+.body {
+  width: 500px;
+  margin: 20px 0px 0px 25vw;
+  height: 1000px;
+  transition: 0.5s all;
+  /* background-color: red; */
+}
+
+.body .left1 {
+  position: absolute;
+  top: 65px;
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  opacity: 75%;
+  cursor: pointer;
+}
+.body .right1 {
+  position: absolute;
+  top: 65px;
+  margin-left: 470px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 0ch;
+  opacity: 75%;
+  cursor: pointer;
+}
+.body .BodyStory {
+  width: 99%;
+  margin-top: 20px;
+  max-height: 200px;
+  background-color: white;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  border: 1px solid rgb(219, 219, 219);
+  margin-bottom: 20px;
+}
+.body .BodyStory .StoryConatent {
+  min-width: 100px;
+  height: 110px;
+  line-height: 110px;
+  /* background-color: blue; */
+  margin-left: 7px;
+}
+.body .BodyStory .StoryConatent .img12 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border-right: 2px solid rgb(230, 0, 255);
+  border-left: 2px solid rgb(254, 158, 4);
+  border-bottom: 2px solid rgb(254, 158, 4);
+  border-top: 2px solid rgb(230, 0, 255);
+  margin: 10px auto;
+}
+.body .BodyStory .StoryConatent .img12 div {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin: 5%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  float: left;
+}
+.body .BodyStory .StoryConatent .img12 div p {
+  color: black;
+  margin-top: 15px;
+  margin-left: 9px;
+  width: 50px;
+  height: 20px;
+  font-size: 20px;
+}
+.body .BodyPost {
+  height: auto;
+  width: 99%;
+  border: 1px solid RGB(219, 219, 219);
+  margin-bottom: 10px;
+  border-radius: 7px;
+}
+.body .BodyPost .PostTop {
+  width: 100%;
+  height: 65px;
+
+  display: flex;
+}
+.body .BodyPost .PostTop .BodyPostImage {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border-radius: 50%;
+  border-right: 2px solid rgb(230, 0, 255);
+  border-left: 2px solid rgb(254, 158, 4);
+  border-bottom: 2px solid rgb(254, 158, 4);
+  border-top: 2px solid rgb(230, 0, 255);
+}
+.body .BodyPost .PostTop .BodyPostImage div {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: 5% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.body .BodyPost .PostTop .PostDetials {
+  width: 75%;
+  height: 100%;
+}
+.body .BodyPost .PostTop .PostDetials p {
+  margin: 10px;
+}
+.body .BodyPost .PostTop .PostMore {
+  width: 10%;
+  height: 100%;
+}
+.body .BodyPost .PostTop .PostMore button {
+  width: auto;
+  border: 0;
+  margin: 9px auto;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: white;
+  cursor: pointer;
+}
+.body .BodyPost .PostDown .PostContent {
+  width: 100%;
+  height: 500px;
+  /* background-color: red; */
+}
+.body .BodyPost .PostDown .PostContent img {
+  width: 100%;
+  height: 100%;
+}
+.body .BodyPost .PostDown i {
+  width: auto;
+  height: auto;
+  font-size: 25px;
+  margin-top: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+.body .BodyPost .PostDown i:nth-child(4) {
+  position: absolute;
+  margin-left: 330px;
+}
+.body .BodyPost .PostDown .postFooter {
+  width: 100%;
+  height: auto;
+}
+.body .BodyPost .PostDown .postFooter P {
+  margin: 10px;
+}
+.body .BodyPost .PostDown .postFooter P:nth-child(2) {
+  font-weight: bold;
+}
+.body .BodyPost .PostDown .postFooter P:nth-child(3) {
+  color: gray;
+}
+.body .BodyPost .PostDown .postFooter P:nth-child(4) {
+  color: gray;
+  font-size: 10px;
+}
+.body .BodyPost .PostDown .PostComment {
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid rgb(219, 219, 219);;
+}
+.body .BodyPost .PostDown .PostComment i {
+  margin: 10px;
+}
+.body .BodyPost .PostDown .PostComment input {
+  margin-top: -10px;
+  outline: 0;
+  border: 0;
+  width: 80%;
+  height: 30px;
+  font-size: larger;
+}
+.body .BodyPost .PostDown .PostComment a {
+  margin: 5px;
+  text-decoration: none;
+  color: rgb(0, 255, 255);
+  font-weight: bold;
+}
+
+.BodyAccount {
+  width: 35vw;
+  height: 700px;
+  margin-left: 20px;
+  margin-top: 20px;
+  /* background: red; */
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.BodyAccount .AccuntDetials {
+  width: 100%;
+  height: 100px;
+  /* background-color: black; */
+  display: flex;
+}
+.BodyAccount .AccuntDetials .AccuntDetialsImage {
+  width: auto;
+  height: 100px;
+
+  /* background-color: blue; */
+}
+.BodyAccount .AccuntDetials .AccuntDetialsImage div {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 20px auto;
+  background-position: center;
+  background-size: 100%;
+  /* background-color: blue; */
+}
+.BodyAccount .AccuntDetials span {
+  margin-top: 25px;
+  margin-left: 10px;
+}
+.BodyAccount .AccuntDetials p {
+  margin-top: 50px;
+  margin-left: -100px;
+  color: gray;
+  display: block;
+}
+.BodyAccount .AccuntDetials a {
+  text-decoration: none;
+  margin-top: 40px;
+  margin-left: 150px;
+  color: rgb(40, 29, 194);
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+}
+.BodyAccount .Suggestions {
+  width: 100%;
+  height: auto;
+  /* background-color: red; */
+}
+.BodyAccount .Suggestions span {
+  margin: 20px;
+  color: gray;
+  width: 70%;
+}
+.BodyAccount .Suggestions a {
+  margin-top: 20px;
+  margin-left: 127px;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+.BodyAccount .Follow {
+  width: 100%;
+  height: 100px;
+  /* background: red; */
+  margin-top: 10px;
+}
+
+.BodyAccount .Follow .AccuntDetials {
+  width: auto;
+  height: auto;
+  /* background-color: blue; */
+}
+.BodyAccount .Follow .AccuntDetials .AccuntDetialsImage {
+  width: auto;
+  height: 50px;
+  /* background-color: blue; */
+}
+.BodyAccount .Follow .AccuntDetials .AccuntDetialsImage div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 20px auto;
+  background-position: center;
+  background-size: 100%;
+  /* background-color: blue; */
+}
+.BodyAccount .Follow .AccuntDetials span {
+  margin-top: 25px;
+  margin-left: 10px;
+}
+.BodyAccount .Follow .AccuntDetials p {
+  margin-top: 45;
+  margin-left: -100px;
+  color: gray;
+  display: block;
+}
+.BodyAccount .Follow .AccuntDetials a {
+  text-decoration: none;
+  margin-top: 40px;
+  margin-left: 170px;
+  color: rgb(40, 29, 194);
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+}
+.BodyAccount .Follow .footer {
+  width: 100%;
+  height: 100px;
+  margin-top: 15px;
+  /* background-color: red; */
+}
+.BodyAccount .Follow .footer a {
+  text-decoration: none;
+  color: gray;
+  font-size: 14px;
+}
+.BodyAccount .Follow .footer P {
+  text-decoration: none;
+  color: gray;
+  font-size: 14px;
+  margin-top: 10px;
+}
+@media screen and (min-width: 995px) and (max-width: 1300px) {
+  .SideMenu {
+    position: fixed;
+    height: 100%;
+    width: 50px;
+    top: 0;
+    left: 0;
+    /* background: black; */
+    border-right: 1px solid black;
+  }
+  .SideMenu a {
+    display: none;
+  }
+  .SideMenu i {
+    margin: auto 0 auto 30%;
+  }
+  .MenuLogo .Logo {
+    background-image: none;
+    margin: auto 0 auto 30%;
+  }
+  .MenuLogo .Logo a {
+    display: none;
+  }
+  .MenuLogo .Logo i {
+    margin: auto 0 auto 6%;
+    visibility: visible;
+  }
+  .body {
+    margin: 20px 0px 10px 10vw;
+  }
+}
+@media screen and (min-width: 770px) and (max-width: 995px) {
+  .BodyAccount {
+    display: none;
+  }
+  .SideMenu {
+    position: fixed;
+    height: 100%;
+    width: 50px;
+    top: 0;
+    left: 0;
+    /* background: black; */
+    border-right: 1px solid black;
+  }
+  .SideMenu a {
+    display: none;
+  }
+  .SideMenu i {
+    margin: auto 0 auto 30%;
+  }
+  .MenuLogo .Logo {
+    background-image: none;
+    margin: auto 0 auto 30%;
+  }
+  .MenuLogo .Logo a {
+    display: none;
+  }
+  .MenuLogo .Logo i {
+    margin: auto 0 auto 6%;
+    visibility: visible;
+  }
+  .body {
+    margin: 20px 100px 10px 20vw;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 770px) {
+  .SideMenu {
+    height: 10vh;
+    width: 100%;
+    top: 90%;
+    right: 0;
+    /* background: black; */
+    border-top: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: white;
+    z-index: 5000;
+  }
+  .MenuLogo,
+  .MenuItemMore {
+    display: none;
+  }
+  .SideMenu a {
+    display: none;
+  }
+  .SideMenu .MenuItem {
+    width: 25%;
+    height: 100%;
+  }
+  .SideMenu .MenuItem:nth-child(3),
+  .SideMenu .MenuItem:nth-child(6) {
+    display: none;
+  }
+  .nav {
+    display: block;
+    display: flex;
+    background-color: white;
+    z-index: 1000;
+  }
+  .nav .NavContent .SearchInput i {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-left: 5px;
+  }
+  .body {
+    margin: 75px auto 200px auto;
+  }
+  .left1 {
+    margin-top: 60px;
+  }
+  .right1 {
+    margin-top: 60px;
+  }
+  .BodyAccount {
+    display: none;
+  }
+}
